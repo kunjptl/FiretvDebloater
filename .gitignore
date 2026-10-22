@@ -1,0 +1,5 @@
+sessions/
+platform-tools/
+platform-tools.zip
+__pycache__/
+*.pyc

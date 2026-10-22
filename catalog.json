@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "notes": "Packages are only ever disabled with 'pm disable-user --user 0' and re-enabled with 'pm enable'. Nothing is uninstalled. Packages not installed on a given stick are skipped. 'confidence' marks how well the package's purpose is documented by the community.",
+  "categories": {
+    "ads": {
+      "title": "Ads and sponsored content",
+      "mode": "group",
+      "default": true
+    },
+    "telemetry": {
+      "title": "Telemetry, tracking and usage reporting",
+      "mode": "group",
+      "default": true
+    },
+    "junk": {
+      "title": "Preinstalled extras most people never open",
+      "mode": "group",
+      "default": true
+    },
+    "features": {
+      "title": "Features you might use (asked one by one)",
+      "mode": "each",
+      "default": false
+    },
+    "unconfirmed": {
+      "title": "Poorly documented Amazon services (asked one by one, test after each)",
+      "mode": "each",
+      "default": false
+    }
+  },
+  "packages": [
+    {"package": "com.amazon.kso", "category": "ads", "label": "Special Offers ad service", "description": "Serves sponsored banners and offers on the home screen.", "confidence": "high"},
+    {"package": "com.amazon.hybridadidservice", "category": "ads", "label": "Advertising ID and personalized ads", "description": "Builds the ad profile used for targeted ads and recommendations.", "confidence": "high"},
+    {"package": "com.amazon.media.recommendations", "category": "ads", "label": "Recommendation feed", "description": "Feeds promoted rows and banners on the home screen. Home rows from your installed apps stay.", "confidence": "medium"},
+    {"package": "com.amazon.sneakpeek", "category": "ads", "label": "Autoplay previews", "description": "Plays promoted video previews in the home screen hero banner.", "confidence": "medium"},
+    {"package": "com.amazon.shoptv.client", "category": "ads", "label": "Shop on TV", "description": "In-TV shopping for Amazon products.", "confidence": "high"},
+    {"package": "com.amazon.shoptv.firetv.client", "category": "ads", "label": "Shop on TV (Fire TV client)", "description": "In-TV shopping for Amazon products.", "confidence": "medium"},
+
+    {"package": "com.amazon.dp.logger", "category": "telemetry", "label": "Device platform logger", "description": "Collects diagnostic logs and uploads them to Amazon.", "confidence": "high"},
+    {"package": "com.amazon.device.telemetry.emitter", "category": "telemetry", "label": "Telemetry emitter", "description": "Sends usage and error reports to Amazon.", "confidence": "high"},
+    {"package": "com.amazon.wirelessmetrics.service", "category": "telemetry", "label": "Wireless metrics", "description": "Reports Wi-Fi and Bluetooth statistics to Amazon.", "confidence": "high"},
+    {"package": "com.amazon.perfcollection", "category": "telemetry", "label": "Performance collection", "description": "Collects performance data for Amazon.", "confidence": "high"},
+    {"package": "com.amazon.device.crashmanager", "category": "telemetry", "label": "Crash reporter", "description": "Uploads crash dumps to Amazon.", "confidence": "high"},
+    {"package": "com.amazon.client.metrics", "category": "telemetry", "label": "Client metrics", "description": "Collects app usage metrics for Amazon.", "confidence": "medium"},
+    {"package": "com.amazon.tv.acr", "category": "telemetry", "label": "Automatic content recognition", "description": "Analyzes what plays on screen for viewing statistics. Mostly on Fire TV Edition TVs.", "confidence": "high"},
+    {"package": "com.amazon.wifilocker", "category": "telemetry", "label": "Wi-Fi password cloud backup", "description": "Saves your Wi-Fi passwords to your Amazon account.", "confidence": "medium"},
+
+    {"package": "com.amazon.ods.kindleconnect", "category": "junk", "label": "Kindle connect", "description": "Kindle book integration.", "confidence": "high"},
+    {"package": "com.amazon.tv.democontent.provider", "category": "junk", "label": "Store demo content", "description": "Retail demo mode content.", "confidence": "medium"},
+    {"package": "com.amazon.storm.lightning.tutorial", "category": "junk", "label": "Tutorial videos", "description": "First-run tutorial content.", "confidence": "medium"},
+    {"package": "com.amazon.ags.app", "category": "junk", "label": "GameCircle", "description": "Old Amazon game achievements service.", "confidence": "medium"},
+
+    {"package": "com.amazon.bueller.photos", "category": "features", "label": "Amazon Photos", "description": "Photos app and photo screensaver. Keep it if you use your own photos as the screensaver.", "confidence": "high"},
+    {"package": "com.amazon.bueller.music", "category": "features", "label": "Amazon Music", "description": "Amazon Music app and background sync.", "confidence": "high"},
+    {"package": "com.amazon.imdb.tv.android.app", "category": "features", "label": "Freevee", "description": "Free ad-supported Amazon streaming app.", "confidence": "high"},
+    {"package": "com.amazon.minitv.android.app", "category": "features", "label": "Amazon miniTV", "description": "Free short-video streaming app sold in India.", "confidence": "medium"},
+    {"package": "com.amazon.gamehub", "category": "features", "label": "Games hub", "description": "Games section and Luna promotions.", "confidence": "medium"},
+    {"package": "com.amazon.cloud9", "category": "features", "label": "Silk browser", "description": "Amazon web browser.", "confidence": "high"},
+    {"package": "com.amazon.tahoe", "category": "features", "label": "Amazon Kids and parental profiles", "description": "Kids profiles and time limits. Keep it if children use this TV.", "confidence": "high"},
+    {"package": "com.amazon.tv.alexanotifications", "category": "features", "label": "Alexa notifications", "description": "Alexa alerts and notification popups.", "confidence": "high"},
+    {"package": "com.amazon.smarthomemapviewapp", "category": "features", "label": "Smart home dashboard", "description": "Camera feeds and smart home device map. Keep it if you view Ring or other cameras on the TV.", "confidence": "high"},
+    {"package": "com.amazon.tv.matter", "category": "features", "label": "Matter smart home linking", "description": "Links Matter smart home devices.", "confidence": "high"},
+    {"package": "com.amazon.spiderpork", "category": "features", "label": "Sideload scanner", "description": "Scans for sideloaded apps and blocks ones Amazon flags. Disable it if you sideload apps.", "confidence": "medium"},
+    {"package": "com.amazon.tv.forcedotaupdater.v2", "category": "features", "label": "Forced update installer", "description": "Installs Fire OS updates without asking. Disabling it means you install updates yourself.", "confidence": "medium"},
+    {"package": "com.amazon.device.software.ota", "category": "features", "label": "System updates", "description": "Downloads Fire OS updates, including security fixes. Most people should keep it.", "confidence": "high"},
+    {"package": "com.amazon.venezia", "category": "features", "label": "Amazon Appstore", "description": "Installs and updates apps such as Netflix and YouTube. Most people should keep it.", "confidence": "high"},
+
+    {"package": "com.amazon.kso.blackbird", "category": "unconfirmed", "label": "Special Offers helper (blackbird)", "description": "Part of the Special Offers family. Exact role undocumented.", "confidence": "low"},
+    {"package": "com.amazon.hedwig", "category": "unconfirmed", "label": "Hedwig push service", "description": "Believed to deliver push notifications. Undocumented.", "confidence": "low"},
+    {"package": "com.amazon.audiohome", "category": "unconfirmed", "label": "Audio home", "description": "Believed to handle Echo home theater audio pairing. Keep it if you pair Echo speakers.", "confidence": "low"},
+    {"package": "com.amazon.tv.easyupgrade", "category": "unconfirmed", "label": "Easy upgrade", "description": "Believed to promote device upgrades. Undocumented.", "confidence": "low"},
+    {"package": "com.amazon.whisperplay.contracts", "category": "unconfirmed", "label": "Whisperplay contracts", "description": "Part of the phone-to-TV casting stack. Keep it if you cast from the Prime Video phone app.", "confidence": "low"}
+  ],
+  "settings": [
+    {"id": "limit_ad_tracking", "category": "telemetry", "label": "Turn off interest-based ads", "namespace": "secure", "key": "limit_ad_tracking", "value": "1", "default": true},
+    {"id": "animations", "category": "speed", "label": "Halve menu animation time (feels faster)", "namespace": "global", "keys": ["window_animation_scale", "transition_animation_scale", "animator_duration_scale"], "value": "0.5", "default": true}
+  ],
+  "protected": [
+    "android",
+    "com.android.systemui",
+    "com.android.settings",
+    "com.android.shell",
+    "com.amazon.tv.launcher",
+    "com.amazon.tv.settings",
+    "com.amazon.tv.settings.v2",
+    "com.amazon.tv.oobe",
+    "com.amazon.tv.ime",
+    "com.amazon.tv.inputpreference.service",
+    "com.amazon.device.controllermanager",
+    "com.amazon.webview.chromium",
+    "com.amazon.tv.parentalcontrols",
+    "com.amazon.tcomm",
+    "com.amazon.dcp",
+    "com.amazon.device.messaging",
+    "com.amazon.tifobserver",
+    "com.amazon.vizzini",
+    "com.ivona.tts.oem"
+  ]
+}
